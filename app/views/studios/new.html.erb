@@ -1,0 +1,10 @@
+<h1>New Studio Form</h1>
+<p>Associate an Artist with an Instrument here!</p>
+
+<%= form_for @studio do |f|%>
+<%= f.label :artist_id, value = "Artist"%>
+<%= f.collection_select :artist_id, Artist.all, :id, :name%>
+<%= f.label :instrument_id, value = "Instrument"%>
+<%= f.collection_select :instrument_id, Instrument.all, :id, :name%>
+<%= f.submit %>
+<%end%>

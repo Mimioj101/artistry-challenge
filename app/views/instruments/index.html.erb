@@ -1,0 +1,5 @@
+<h1>All Instruments</h1>
+<% Instrument.all.each do |i| %>
+<%= link_to i.name, instrument_path(i)%><br>
+<%= i.classification %><br><br>
+<%end%>
